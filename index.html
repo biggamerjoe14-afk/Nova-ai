@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVA AI</title>
+<style>
+body {
+  margin: 0;
+  background: #10111b;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+h1 {
+  font-size: 42px;
+  background: linear-gradient(90deg,red,orange,yellow,lime,cyan,violet);
+  color: transparent;
+  background-clip: text;
+}
+p { color: #bbb; }
+.chat {
+  max-width: 500px;
+  margin: 35px auto;
+  background: #202334;
+  padding: 20px;
+  border-radius: 20px;
+}
+input {
+  width: 65%;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+}
+button {
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#e34bff,#438cff,#36dc9b);
+  color: white;
+}
+#answer { margin-top: 20px; }
+</style>
+</head>
+<body>
+<h1>🌈 NOVA AI</h1>
+<p>Deine KI. Deine Zukunft.</p>
+<div class="chat">
+  <h2>Hallo! Ich bin NOVA 🤖</h2>
+  <p>Was möchtest du wissen?</p>
+  <input id="msg" placeholder="Schreib mir etwas...">
+  <button onclick="send()">Senden</button>
+  <div id="answer"></div>
+</div>
+<script>
+function send() {
+  let msg = document.getElementById("msg").value;
+  if (!msg.trim()) return;
+  document.getElementById("answer").innerText =
+    "Du hast geschrieben: " + msg +
+    "\n\nIch bin NOVA AI! Mein echtes KI-Gehirn kommt als Nächstes. 🌈";
+}
+</script>
+</body>
+</html>
